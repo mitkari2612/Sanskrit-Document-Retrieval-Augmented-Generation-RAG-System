@@ -6,7 +6,7 @@ This repository contains a personal implementation of a Retrieval-Augmented Gene
 
 ## Project Summary
 
-This project is implemented to meet assignment-style evaluation criteria for a data science / AI role. It focuses on:
+ It focuses on:
 
 - Clear retrieval and generation architecture
 - Practical local execution using CPU-friendly components
@@ -17,7 +17,7 @@ This project is implemented to meet assignment-style evaluation criteria for a d
 
 ## Project Overview
 
-This project is built as an AI assignment implementation for a data science / AI role. It is designed and implemented personally with the following goals:
+ It is designed and implemented personally with the following goals:
 
 - Provide a clear **system architecture** for retrieval and generation
 - Support both **Ollama** and **HuggingFace Transformers** backends
@@ -57,7 +57,7 @@ This project is built as an AI assignment implementation for a data science / AI
 
 ---
 
-## Evaluation-Aligned Highlights
+
 
 ### 1. System Architecture
 
@@ -111,7 +111,6 @@ The following screenshots are included as project evidence. Place the screenshot
 
 1. `images/ui-search.png` - main app UI with query entry and generation flow
 2. `images/ui-result.png` - generated answer with retrieved verses visible
-3. `images/evaluation-criteria.png` - screenshot of assignment evaluation criteria
 
 Example usage in README:
 
@@ -119,9 +118,9 @@ Example usage in README:
 
 ![Generated Result](images/ui-result.png)
 
-![Evaluation Criteria](images/evaluation-criteria.png)
 
-> These screenshots demonstrate the app interface, the model response, and the assignment evaluation criteria. They are included to support the project as a task submission.
+
+> These screenshots demonstrate the app interface, the model response. 
 
 ---
 
@@ -176,7 +175,7 @@ The app shows:
 
 ## Demo Instructions
 
-For a quick interviewer demo, follow these steps:
+
 
 1. Start the app using:
    ```powershell

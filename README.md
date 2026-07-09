@@ -174,6 +174,28 @@ The app shows:
 
 ---
 
+## Demo Instructions
+
+For a quick interviewer demo, follow these steps:
+
+1. Start the app using:
+   ```powershell
+   & ".venv\Scripts\python.exe" -m streamlit run code\app.py
+   ```
+2. Open `http://localhost:8501`.
+3. In the sidebar, select `transformers` and set the model to:
+   - `Qwen/Qwen2.5-0.5B-Instruct`
+4. Set **Number of Results** to `5` and keep **Enable Semantic Search** off for the first run.
+5. Use one of the example queries, such as:
+   - `What is karma yoga?`
+   - `dharma and duty`
+6. Click **Search the Gita** and wait for the response.
+7. Expand the retrieved verses and review the generated answer section.
+
+This sequence demonstrates the full retrieval-to-answer flow and the system’s ability to use the Bhagavad Gita corpus effectively.
+
+---
+
 ## Repository
 
 This project is hosted on GitHub at:

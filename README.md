@@ -129,7 +129,7 @@ Example usage in README:
 1. Open PowerShell.
 2. Change to the project folder:
    ```powershell
-   cd "C:\Users\Ajay Mitkari\Downloads\Project Nagpur\RAG_Sanskrit_Ajay_Mitkari"
+   cd "C:\Users\Ajay Mitkari\Downloads\RAG_Sanskrit_Ajay Mitkari\RAG_Sanskrit_Ajay_Mitkari"
    ```
 3. Create and activate a virtual environment:
    ```powershell
@@ -146,7 +146,7 @@ Example usage in README:
 Start the Streamlit application:
 
 ```powershell
-cd "C:\Users\Ajay Mitkari\Downloads\Project Nagpur\RAG_Sanskrit_Ajay_Mitkari"
+cd "C:\Users\Ajay Mitkari\Downloads\RAG_Sanskrit_Ajay Mitkari\RAG_Sanskrit_Ajay_Mitkari"
 & ".venv\Scripts\python.exe" -m streamlit run code\app.py
 ```
 

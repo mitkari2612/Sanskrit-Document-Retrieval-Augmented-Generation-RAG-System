@@ -52,6 +52,7 @@ This repository contains a personal implementation of a Retrieval-Augmented Gene
   - `gita_processed.json` - preprocessed Bhagavad Gita data used for retrieval
 - `report/`
   - `generate_report.py` - report generation script
+  - `Sanskrit_RAG_Technical_Report.pdf` - final PDF technical report submitted with the project
 - `images/`
   - Proof screenshots and UI evidence
 
@@ -108,6 +109,9 @@ This repository contains a personal implementation of a Retrieval-Augmented Gene
 ## Screenshots / Proof
 
 The following screenshots are included as project evidence. Place the screenshot files into the `images/` folder with the given names:
+
+- Final PDF report: [report/Sanskrit_RAG_Technical_Report.pdf](report/Sanskrit_RAG_Technical_Report.pdf)
+- The PDF report has also been included in the GitHub repository for submission and review.
 
 1. `images/ui-search.png` - main app UI with query entry and generation flow
 2. `images/ui-result.png` - generated answer with retrieved verses visible

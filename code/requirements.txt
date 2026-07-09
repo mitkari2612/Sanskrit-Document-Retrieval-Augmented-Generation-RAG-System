@@ -1,0 +1,11 @@
+streamlit
+transformers
+sentence-transformers
+accelerate
+pandas
+numpy
+scikit-learn
+reportlab
+pypdf
+requests
+python-docx

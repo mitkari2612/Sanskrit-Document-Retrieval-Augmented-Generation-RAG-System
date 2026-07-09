@@ -1,4 +1,4 @@
-# Sanskrit Document RAG System
+# Sanskrit-Document-Retrieval-Augmented-Generation-RAG-System
 
 A local Retrieval-Augmented Generation (RAG) application for querying the Bhagavad Gita using a Streamlit interface.
 
@@ -66,16 +66,14 @@ Then open the browser at:
 
 ## GitHub Upload
 
-To upload this project to GitHub:
+This repository is already connected to GitHub at:
 
-1. Create a new repository on GitHub.
-2. In this folder, run:
-   ```powershell
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/USERNAME/REPO_NAME.git
-   git push -u origin main
-   ```
+- `https://github.com/mitkari2612/Sanskrit-Document-Retrieval-Augmented-Generation-RAG-System`
 
-Replace `USERNAME` and `REPO_NAME` with your GitHub account and repository name.
+To update the remote in the future:
+
+```powershell
+git add .
+git commit -m "Your message"
+git push origin main
+```

@@ -4,6 +4,17 @@ This repository contains a personal implementation of a Retrieval-Augmented Gene
 
 ---
 
+## Project Summary
+
+This project is implemented to meet assignment-style evaluation criteria for a data science / AI role. It focuses on:
+
+- Clear retrieval and generation architecture
+- Practical local execution using CPU-friendly components
+- Demonstrable end-to-end query-to-answer flow
+- Interview-ready documentation and evidence
+
+---
+
 ## Project Overview
 
 This project is built as an AI assignment implementation for a data science / AI role. It is designed and implemented personally with the following goals:

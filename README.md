@@ -1,20 +1,98 @@
-# Sanskrit-Document-Retrieval-Augmented-Generation-RAG-System
+# Sanskrit Document RAG System
 
-A local Retrieval-Augmented Generation (RAG) application for querying the Bhagavad Gita using a Streamlit interface.
+This repository contains a personal implementation of a Retrieval-Augmented Generation (RAG) system for the Bhagavad Gita. The project demonstrates end-to-end retrieval, prompt construction, and local generation using a Streamlit UI.
+
+---
+
+## Project Overview
+
+This project is built as an AI assignment implementation for a data science / AI role. It is designed and implemented personally with the following goals:
+
+- Provide a clear **system architecture** for retrieval and generation
+- Support both **Ollama** and **HuggingFace Transformers** backends
+- Keep the solution **CPU-friendly** for local execution
+- Present the model results in a polished **Streamlit application**
+
+---
+
+## What this project does
+
+- Reads a preprocessed Bhagavad Gita corpus from `data/gita_processed.json`
+- Uses a **TF-IDF retrieval engine** (character n-grams) to find relevant verses
+- Optionally supports **semantic retrieval** with sentence-transformers
+- Builds a RAG prompt from retrieved verse context
+- Generates an answer using either:
+  - `ollama` backend, or
+  - local `transformers` backend on CPU
+- Displays the results in a clean Streamlit dashboard with retrieved verses and generated response
+
+---
 
 ## Project Structure
 
 - `code/`
-  - `app.py` - Streamlit web application frontend
-  - `generator.py` - LLM generator wrapper for Ollama and HuggingFace Transformers
-  - `ingest.py` - Data ingestion pipeline for the Bhagavad Gita corpus
-  - `rag_pipeline.py` - Retrieval + generation pipeline coordinator
-  - `retriever.py` - TF-IDF and optional semantic retriever
-  - `requirements.txt` - Python package dependencies
+  - `app.py` - Streamlit frontend
+  - `generator.py` - generation backend wrapper for Ollama and Transformers
+  - `ingest.py` - corpus ingestion and preprocessing pipeline
+  - `rag_pipeline.py` - pipeline orchestration for retrieval + generation
+  - `retriever.py` - TF-IDF retrieval and optional semantic search
+  - `requirements.txt` - Python dependencies
 - `data/`
-  - `gita_processed.json` - Processed Bhagavad Gita corpus used for retrieval
+  - `gita_processed.json` - preprocessed Bhagavad Gita data used for retrieval
 - `report/`
-  - `generate_report.py` - Report generation script
+  - `generate_report.py` - report generation script
+- `images/`
+  - Proof screenshots and UI evidence
+
+---
+
+## Evaluation-Aligned Highlights
+
+### 1. System Architecture
+
+- Modular design separating ingestion, retrieval, generation, and UI
+- `rag_pipeline.py` coordinates retrieval, prompt building, and generation
+- `generator.py` encapsulates backend selection and fallback logic
+
+### 2. Functionality
+
+- Fully working end-to-end flow from query to answer
+- Supports multiple input forms: Sanskrit, transliteration, and English
+- Uses retrieved verses as context for generation
+
+### 3. CPU Optimization
+
+- The local model path uses CPU-based Transformers inference
+- `generator.py` includes a fallback path when Ollama is unavailable
+- Streamlit UI and retrieval are optimized for local execution without GPU
+
+### 4. Code Quality
+
+- Clear project structure and documentation
+- `README.md` provides setup and usage instructions for interview review
+- Code is written to be maintainable and reproducible
+
+---
+
+## Screenshots / Proof
+
+The following screenshots are included as project evidence. Place the screenshot files into the `images/` folder with the given names:
+
+1. `images/ui-search.png` - main app UI with query entry and generation flow
+2. `images/ui-result.png` - generated answer with retrieved verses visible
+3. `images/evaluation-criteria.png` - screenshot of assignment evaluation criteria
+
+Example usage in README:
+
+![UI Search](images/ui-search.png)
+
+![Generated Result](images/ui-result.png)
+
+![Evaluation Criteria](images/evaluation-criteria.png)
+
+> These screenshots demonstrate the app interface, the model response, and the assignment evaluation criteria. They are included to support the project as a task submission.
+
+---
 
 ## Setup
 
@@ -23,7 +101,7 @@ A local Retrieval-Augmented Generation (RAG) application for querying the Bhagav
    ```powershell
    cd "C:\Users\Ajay Mitkari\Downloads\Project Nagpur\RAG_Sanskrit_Ajay_Mitkari"
    ```
-3. (Optional) create and activate a virtual environment:
+3. Create and activate a virtual environment:
    ```powershell
    python -m venv .venv
    & ".venv\Scripts\Activate.ps1"
@@ -33,47 +111,48 @@ A local Retrieval-Augmented Generation (RAG) application for querying the Bhagav
    python -m pip install -r code\requirements.txt
    ```
 
-## Running the app
+## Run the app
 
-Start the Streamlit app from the project root:
+Start the Streamlit application:
 
 ```powershell
 cd "C:\Users\Ajay Mitkari\Downloads\Project Nagpur\RAG_Sanskrit_Ajay_Mitkari"
 & ".venv\Scripts\python.exe" -m streamlit run code\app.py
 ```
 
-Then open the browser at:
+Open the browser at:
 
 - `http://localhost:8501`
 
-## How to use
+---
 
-1. In the left sidebar, choose the generator backend:
-   - `ollama` if you have Ollama installed and running locally
-   - `transformers` for a Python-based local model
-2. Set the model name:
+## Usage
+
+1. Select the generator backend in the sidebar:
+   - `ollama` if you have Ollama installed locally
+   - `transformers` for a CPU-backed HuggingFace model
+2. Choose the model name:
    - `qwen2.5:0.5b` for Ollama
    - `Qwen/Qwen2.5-0.5B-Instruct` for Transformers
 3. Enter a query in Sanskrit, transliteration, or English.
 4. Click **Search the Gita**.
-5. The app will show retrieved verses and a generated answer.
 
-## Notes
+The app shows:
+- **Retrieved Verses** from the Bhagavad Gita
+- **Generated Answer** based on retrieved context
 
-- If the generated answer section shows an error, it means the model backend is not available.
-- For local Python inference, use `transformers` and install the required packages.
-- The app currently supports fallback from Ollama to Transformers when Ollama is unavailable.
+---
 
-## GitHub Upload
+## Repository
 
-This repository is already connected to GitHub at:
+This project is hosted on GitHub at:
 
 - `https://github.com/mitkari2612/Sanskrit-Document-Retrieval-Augmented-Generation-RAG-System`
 
-To update the remote in the future:
+To update the repository:
 
 ```powershell
 git add .
-git commit -m "Your message"
+git commit -m "Update project"
 git push origin main
 ```

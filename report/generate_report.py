@@ -1,4 +1,4 @@
-streamlit run code/app.pystreamlit run code/app.pystreamlit run code/app.py"""
+"""
 generate_report.py - Technical Report Generator
 =================================================
 Generates a professional PDF technical report for the

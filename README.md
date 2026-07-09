@@ -85,6 +85,26 @@ This project is built as an AI assignment implementation for a data science / AI
 
 ---
 
+## Key Achievements
+
+- Built a complete end-to-end RAG solution from corpus ingestion to query response
+- Implemented both retrieval and generation in a single modular pipeline
+- Supported CPU-only execution for practical local deployment
+- Added clear fallback handling for Ollama vs Transformers backends
+- Designed a polished Streamlit interface appropriate for demo and evaluation
+
+## Technical Stack
+
+- Python 3.11 / 3.14
+- Streamlit for UI
+- Scikit-learn TF-IDF retrieval
+- Sentence-transformers for optional semantic search
+- HuggingFace Transformers for local generation
+- Ollama backend support for lightweight inference
+- JSON-based corpus storage and preprocessing
+
+---
+
 ## Screenshots / Proof
 
 The following screenshots are included as project evidence. Place the screenshot files into the `images/` folder with the given names:
